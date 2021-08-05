@@ -1,6 +1,6 @@
 import { Link, List, ListItem } from '@material-ui/core'
 
-export default function Sidebar({ routes }) {
+export default function Sidebar({ routes }: any) {
 
     return (
         <div>
