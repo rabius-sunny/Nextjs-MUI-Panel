@@ -1,9 +1,10 @@
 import { Link, List, ListItem } from '@material-ui/core'
+import { DrawerContainer } from './mui_custom_styles'
 
 export default function Sidebar({ routes }: any) {
 
     return (
-        <div>
+        <DrawerContainer>
             <List>
                 {
                     routes.map((route: any, key: any) => (
@@ -15,6 +16,6 @@ export default function Sidebar({ routes }: any) {
                     ))
                 }
             </List>
-        </div>
+        </DrawerContainer>
     )
 }
