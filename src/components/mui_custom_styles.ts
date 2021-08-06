@@ -1,4 +1,4 @@
-import { AppBar, Avatar, InputBase, ListItem, ListItemIcon, ListItemText, styled, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Avatar, InputBase, ListItem, ListItemIcon, ListItemText, styled, Toolbar, Typography } from "@material-ui/core"
 
 const RootContainer = styled('div')({
     backgroundColor: '#F1F3F4',
@@ -46,6 +46,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const ToolMenu = styled(Toolbar)({
     padding: '0 10px !important'
 })
+
 const RectAvatar = styled(Avatar)({
     width: '60px',
     height: '60px',
@@ -64,7 +65,7 @@ const Brand = styled(Typography)({
     padding: '40px 0 20px 0',
     textAlign: 'center',
     fontSize: '30px',
-    fontWeight: 700,
+    fontWeight: 700
 })
 
 const BLockListItem = styled(ListItem)({
@@ -76,9 +77,9 @@ const BLockListItem = styled(ListItem)({
     height: '80px',
     cursor: 'pointer',
     transition: 'all .2s ease-in-out',
+    borderRadius: '5px',
     '&:hover': {
-        backgroundColor: '#7D48B1',
-        borderRadius: '5px'
+        backgroundColor: '#7D48B1'
     }
 })
 
@@ -87,7 +88,7 @@ const ListIcon = styled(ListItemIcon)({
 })
 
 const ListText = styled(ListItemText)({
-    color: 'white',
+    color: 'white'
 })
 
 const TransparentAppbar = styled(AppBar)({
@@ -127,6 +128,5 @@ const ValueTypo = styled('h1')(({ color }) => ({
     fontWeight: 700,
     color: color
 }))
-
 
 export { RootContainer, DrawerContainer, Brand, BLockListItem, ListIcon, ListText, TransparentAppbar, Card, Capsul, NameTypo, ValueTypo, Search, SearchIconWrapper, StyledInputBase, ToolMenu, RectAvatar }

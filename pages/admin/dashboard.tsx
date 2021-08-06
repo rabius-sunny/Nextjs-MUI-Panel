@@ -1,5 +1,5 @@
 import { Grid } from "@material-ui/core"
-import AnalyticsCard from "../../components/analyticsCard"
+import AnalyticsCard from "../../src/components/analyticsCard"
 import analytics from '../../src/analytics'
 
 export default function Dashboard() {

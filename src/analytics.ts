@@ -8,6 +8,7 @@ interface card {
     icon: any;
     color: any;
 }
+
 const { primary, info, success, warning } = theme.palette
 const cardData: card[] = [
     {

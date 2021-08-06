@@ -1,4 +1,5 @@
 import { Dashboard, Table, Security, Reminder, Memo, Gesture, Employees, Weather, Board, Monitorize } from './icons'
+
 interface route {
     name: string;
     path: string;
@@ -68,7 +69,5 @@ const routes: route[] = [
         layout: "/admin"
     },
 ]
-
-
 
 export default routes

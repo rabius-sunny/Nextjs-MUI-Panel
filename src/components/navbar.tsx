@@ -1,19 +1,20 @@
-import * as React from 'react';
-import Box from '@material-ui/core/Box';
-import IconButton from '@material-ui/core/IconButton';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import MoreIcon from '@material-ui/icons/MoreVert';
+import * as React from 'react'
+import Box from '@material-ui/core/Box'
+import IconButton from '@material-ui/core/IconButton'
+import MenuItem from '@material-ui/core/MenuItem'
+import Menu from '@material-ui/core/Menu'
+import SearchIcon from '@material-ui/icons/Search'
+import MoreIcon from '@material-ui/icons/MoreVert'
 import { TransparentAppbar, Search, SearchIconWrapper, StyledInputBase, ToolMenu, RectAvatar } from './mui_custom_styles'
-import { TripleMenu, Arrow, Notification } from '../src/utilities/icons'
-import { Avatar } from '@material-ui/core';
+import { TripleMenu, Arrow, Notification } from '../utilities/icons'
+import { Avatar } from '@material-ui/core'
 
 export default function Navbar() {
+
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null)
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
     const handleMobileMenuClose = () => {
-        setMobileMoreAnchorEl(null);
+        setMobileMoreAnchorEl(null)
     }
     const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
         setMobileMoreAnchorEl(event.currentTarget)
@@ -24,13 +25,13 @@ export default function Navbar() {
             anchorEl={mobileMoreAnchorEl}
             anchorOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right'
             }}
             id={mobileMenuId}
             keepMounted
             transformOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right'
             }}
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
@@ -57,7 +58,7 @@ export default function Navbar() {
                 <p>Profile</p>
             </MenuItem>
         </Menu>
-    );
+    )
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -114,5 +115,5 @@ export default function Navbar() {
             </TransparentAppbar>
             {renderMobileMenu}
         </Box>
-    );
+    )
 }
