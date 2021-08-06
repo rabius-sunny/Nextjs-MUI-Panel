@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
-import Layout from '../layout/layout'
+import Layout from '../src/layout/layout'
 
 const clientSideEmotionCache = createEmotionCache();
 

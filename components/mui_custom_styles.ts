@@ -1,9 +1,10 @@
-import { AppBar, InputBase, ListItem, ListItemIcon, styled, Typography } from "@material-ui/core";
+import { AppBar, Avatar, InputBase, ListItem, ListItemIcon, ListItemText, styled, Typography } from "@material-ui/core";
 
 const RootContainer = styled('div')({
     backgroundColor: '#F1F3F4',
     minHeight: '2000px'
 })
+
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     color: '#B1B1B1',
@@ -15,9 +16,9 @@ const Search = styled('div')(({ theme }) => ({
     height: '50px',
     [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing(3),
-        maxWidth: '500px',
-    },
-}));
+        maxWidth: '500px'
+    }
+}))
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
@@ -26,8 +27,8 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
     pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-}));
+    justifyContent: 'center'
+}))
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
@@ -37,16 +38,18 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('md')]: {
-            width: '20ch',
-        },
-    },
-}));
+            width: '20ch'
+        }
+    }
+}))
+
 const DrawerContainer = styled('div')({
     backgroundColor: '#663399',
     width: '120px',
     height: '100%',
     textAlign: 'center'
 })
+
 const Brand = styled(Typography)({
     color: 'white',
     padding: '35px 0 0 0',
@@ -54,17 +57,36 @@ const Brand = styled(Typography)({
     fontSize: '30px',
     fontWeight: 700,
 })
+
 const BLockListItem = styled(ListItem)({
     display: 'block',
     textAlign: 'center',
     padding: '10px 0'
 })
+
 const ListIcon = styled(ListItemIcon)({
     minWidth: "0"
 })
+
+const ListText = styled(ListItemText)({
+    color: 'white',
+})
+
 const TransparentAppbar = styled(AppBar)({
     backgroundColor: 'inherit',
     boxShadow: 'none'
 })
 
-export { RootContainer, DrawerContainer, Brand, BLockListItem, ListIcon, TransparentAppbar, Search, SearchIconWrapper, StyledInputBase }
+const Card = styled('div')({
+    width: '296px',
+    height: '131px',
+    background: 'white',
+    borderRadius: '24px'
+})
+
+const Capsul = styled(Avatar)({
+
+})
+
+
+export { RootContainer, DrawerContainer, Brand, BLockListItem, ListIcon, ListText, TransparentAppbar, Card, Capsul, Search, SearchIconWrapper, StyledInputBase }

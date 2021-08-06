@@ -1,21 +1,37 @@
-import { Link, List, ListItem } from '@material-ui/core'
-import { DrawerContainer } from './mui_custom_styles'
+import * as React from 'react';
+import Box from '@material-ui/core/Box';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import List from '@material-ui/core/List';
+import routes from '../src/utilities/routes'
+import { Brand, BLockListItem, ListIcon, DrawerContainer, ListText } from './mui_custom_styles'
+import Navbar from './navbar';
 
-export default function Sidebar({ routes }: any) {
-
+export default function Sidebar2({ children }: any) {
     return (
-        <DrawerContainer>
-            <List>
-                {
-                    routes.map((route: any, key: any) => (
-                        <Link href={route.layout + route.path} key={key}>
-                            <ListItem>
-                                {route.name}
-                            </ListItem>
-                        </Link>
-                    ))
-                }
-            </List>
-        </DrawerContainer>
-    )
+        <Box sx={{ display: 'flex', height: '2000px' }}>
+            <CssBaseline />
+            <DrawerContainer>
+                <Brand>Gull</Brand>
+                <List>
+                    {
+                        routes.map((route, key) => (
+                            <BLockListItem>
+                                <ListIcon key={key}>
+                                    <route.icon />
+                                </ListIcon>
+                                <ListText> {route.name}</ListText>
+                            </BLockListItem>
+                        ))
+                    }
+                </List>
+            </DrawerContainer>
+            <Box
+                component="main"
+                sx={{ flexGrow: 1, p: 3 }}
+            >
+                <Navbar />
+                {children}
+            </Box>
+        </Box>
+    );
 }
