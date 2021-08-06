@@ -21,8 +21,14 @@ const theme = createTheme({
     },
     error: {
       main: red.A400,
-    },
+    }
   },
-});
+  typography: {
+    fontFamily: [
+      'Nunito Sans',
+      'sans-serif'
+    ].join(',')
+  }
+})
 
 export default theme;

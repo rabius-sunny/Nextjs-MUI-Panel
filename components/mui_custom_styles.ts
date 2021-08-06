@@ -1,4 +1,4 @@
-import { AppBar, Avatar, InputBase, ListItem, ListItemIcon, ListItemText, styled, Typography } from "@material-ui/core";
+import { AppBar, InputBase, ListItem, ListItemIcon, ListItemText, styled, Typography } from "@material-ui/core";
 
 const RootContainer = styled('div')({
     backgroundColor: '#F1F3F4',
@@ -61,7 +61,16 @@ const Brand = styled(Typography)({
 const BLockListItem = styled(ListItem)({
     display: 'block',
     textAlign: 'center',
-    padding: '10px 0'
+    padding: '10px 0',
+    margin: '10px auto',
+    width: '94px',
+    height: '80px',
+    cursor: 'pointer',
+    transition: 'all .2s ease-in-out',
+    '&:hover': {
+        backgroundColor: '#7D48B1',
+        borderRadius: '5px'
+    }
 })
 
 const ListIcon = styled(ListItemIcon)({
@@ -70,6 +79,7 @@ const ListIcon = styled(ListItemIcon)({
 
 const ListText = styled(ListItemText)({
     color: 'white',
+    // paddingBottom: '5px'
 })
 
 const TransparentAppbar = styled(AppBar)({
@@ -91,7 +101,7 @@ const Capsul = styled('div')(({ color }) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '0 20px',
+    margin: '0 15px 0 20px',
     background: color,
     width: '36px',
     height: '71px',
@@ -105,6 +115,7 @@ const NameTypo = styled(Typography)({
 
 const ValueTypo = styled('h1')(({ color }) => ({
     fontSize: '30px',
+    margin: '-8px 0 0 0',
     fontWeight: 700,
     color: color
 }))

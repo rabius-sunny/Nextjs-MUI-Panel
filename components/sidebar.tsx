@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link'
 import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
@@ -15,12 +16,14 @@ export default function Sidebar2({ children }: any) {
                 <List>
                     {
                         routes.map((route, key) => (
-                            <BLockListItem>
-                                <ListIcon key={key}>
-                                    <route.icon />
-                                </ListIcon>
-                                <ListText> {route.name}</ListText>
-                            </BLockListItem>
+                            <Link href={route.layout + route.path}>
+                                <BLockListItem>
+                                    <ListIcon key={key}>
+                                        <route.icon />
+                                    </ListIcon>
+                                    <ListText> {route.name}</ListText>
+                                </BLockListItem>
+                            </Link>
                         ))
                     }
                 </List>
