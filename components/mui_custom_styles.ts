@@ -78,15 +78,36 @@ const TransparentAppbar = styled(AppBar)({
 })
 
 const Card = styled('div')({
-    width: '296px',
+    display: 'flex',
+    alignItems: 'center',
+    maxWidth: '296px',
     height: '131px',
     background: 'white',
-    borderRadius: '24px'
+    borderRadius: '24px',
+    margin: '10px'
 })
 
-const Capsul = styled(Avatar)({
+const Capsul = styled('div')(({ color }) => ({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 20px',
+    background: color,
+    width: '36px',
+    height: '71px',
+    borderRadius: '18px'
+}))
 
+const NameTypo = styled(Typography)({
+    color: '#43454D',
+    fontSize: '14px'
 })
 
+const ValueTypo = styled('h1')(({ color }) => ({
+    fontSize: '30px',
+    fontWeight: 700,
+    color: color
+}))
 
-export { RootContainer, DrawerContainer, Brand, BLockListItem, ListIcon, ListText, TransparentAppbar, Card, Capsul, Search, SearchIconWrapper, StyledInputBase }
+
+export { RootContainer, DrawerContainer, Brand, BLockListItem, ListIcon, ListText, TransparentAppbar, Card, Capsul, NameTypo, ValueTypo, Search, SearchIconWrapper, StyledInputBase }
